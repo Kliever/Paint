@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <button class="settings-btn">
+      <div class="settings-btn__line settings-btn__line--top"></div>
+      <div class="settings-btn__line settings-btn__line--center"></div>
+      <div class="settings-btn__line settings-btn__line--bottom"></div>
+    </button>
+    <div class="settings">
+      <div class="settings__bgcolor settings__label">
+        <p class="settings__bgcolor-text settings__text">Цвет фона:</p>
+        <input type="color" class="settings__bgcolor-input input" value="#ffffff"></input>
+      </div>
+      <div class="settings__colorpen settings__label">
+        <p class="settings__colorpen-text settings__text">Цвет карандаша:</p>
+        <input type="color" class="settings__colorpen-input input"></input>
+      </div>
+      <div class="settings__sizepen settings__label">
+        <p class="settings__sizepen-text settings__text">Диаметр карандаша:</p>
+
+        <div class="settings__size-block">
+          <div class="settings__size-min settings__size">1</div>
+          <input type="range" class="settings__sizepen-input input" min="1" max="30" value="10"></input>
+          <div class="settings__size-max settings__size">30</div>
+        </div>
+        <input type="number" class="settings__sizepen-counter" value="10">
+      </div>
+      <button class="clear-btn">Очистить</button>
+    </div>
+    <div class="container">
+      <canvas class="canvas" id="canvas"></canvas>
+      <canvas class="canvas" id="pen"></canvas>
+    </div>
+
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>

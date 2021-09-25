@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  height: 100%;
+  margin: 5px;
+}
+
+.canvas{
+  position: absolute;
+  display: block;
+  border: 1px solid #000;
+  top: 0;
+  left: 0;
+
+}
+#canvas{
+z-index: -1;
+}
+#pen{
+z-index: 2;
+}
+.settings {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: blanchedalmond;
+  transform: translate(-120%, 1px);
+  transition: transform .3s;
+  z-index: 5;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+}
+.settings.active {
+  transform: translate(1px, 1px);
+}
+
+.settings-btn{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  right: 15px;
+  background: none;
+  cursor: pointer;
+  border: none;
+  z-index: 5;
+}
+
+.settings-btn.active .settings-btn__line--top{
+  transform: translate(0, 9px) rotate(45deg);
+}
+.settings-btn.active .settings-btn__line--center{
+  opacity: 0;
+}
+.settings-btn.active .settings-btn__line--bottom{
+  transform: translate(0, -8px) rotate(-45deg);
+}
+
+.settings-btn__line{
+  height: 3px;
+  width: 100%;
+  background: #000;
+  margin: 6px 0;
+  transform: translate(0, 0) rotate(0);
+  opacity: 1;
+  transition: transform .3s, opacity .3s;
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+}
+
+.settings__label{
+  margin-bottom: 20px;
+}
+
+.settings__text{
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.input{
+
+}
+.settings__size-block{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.settings__sizepen-counter{
+  max-width: 30px;
+}
+
+.clear-btn{
+  padding: 5px;
+  width: 100%;
+  background: #fff;
+}
